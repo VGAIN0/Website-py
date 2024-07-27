@@ -1,0 +1,75 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Navigation styling */
+nav {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    z-index: 10; /* Ensure navigation is on top of images */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Main content styling */
+main {
+    padding: 0; /* Remove padding to ensure images touch each other */
+    position: relative; /* Make main relative for the absolute positioning of nav */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Make section relative for the absolute positioning of nav */
+}
+
+section img {
+    width: 100%;
+    max-width: none; /* Ensure images take full width */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove padding */
+    display: block; /* Ensure images are block elements */
+}
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: column; /* Keep the column direction on larger screens too */
+    }
+
+    section img {
+        width: 100%; /* Ensure images take full width */
+    }
+}
